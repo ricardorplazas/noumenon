@@ -36,7 +36,7 @@ h1 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -40%); /* This might need adjustment for Noto Serif */
+    transform: translate(-50%, -30%); /* This might need adjustment for Noto Serif */
                                       /* e.g., try -52% or -55% for the second value */
     font-size: inherit;
     color: #FFFFFF;
