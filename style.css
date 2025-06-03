@@ -1,0 +1,83 @@
+body {
+    background-color: #055746;
+    color: #11d493;
+    font-family: 'Newsreader', serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px; /* Added padding for smaller screens */
+    box-sizing: border-box; /* Ensures padding doesn't add to width/height */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 500; /* Or 400 for regular, adjust as preferred */
+    font-size: 3rem; /* Base size for desktop */
+    margin-bottom: 0.5em; /* Space between h1 and p */
+    line-height: 1.2;
+}
+
+.o-with-dot {
+    position: relative;
+    /* Opacity can be adjusted if you want the original 'o' to be less visible
+       behind the dot, but it might make the dot look like it's in a hole.
+       For a simple dot on top, opacity: 1 is fine.
+       If you meant the dot IS the 'o's counter (the hole), this would be different.
+       Assuming a dot overlaid. */
+}
+
+.o-with-dot::after {
+    content: '·'; /* Using a middle dot character */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: inherit; /* Or a specific size if needed */
+    color: #11d493; /* Same as text color */
+    /* Nudge the dot if it's not perfectly centered in Newsreader.
+       This might require some trial and error.
+       Example: transform: translate(-50%, -55%);
+    */
+    line-height: 0; /* Helps in some browsers for vertical centering */
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.5rem; /* Base size for desktop */
+    margin-top: 0;
+}
+
+/* Responsive adjustments */
+
+/* For tablets and smaller desktops */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .container {
+        padding: 0 10px; /* Ensure content doesn't touch edges */
+    }
+}
