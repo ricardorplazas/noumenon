@@ -36,8 +36,8 @@ h1 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -0%); /* This might need adjustment for Noto Serif */
-                                      /* e.g., try -52% or -55% for the second value */
+    /* Test with a large positive value to push it significantly down */
+    transform: translate(-50%, 100%); /* This should push it far down */
     font-size: inherit;
     color: #FFFFFF;
     line-height: 0;
