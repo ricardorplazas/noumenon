@@ -35,9 +35,8 @@ h1 {
     content: '·';
     position: absolute;
     left: 50%;
-    top: 50%;
-    /* Test with a large positive value to push it significantly down */
-    transform: translate(-50%, 100%); /* This should push it far down */
+    top: 80%; /* Change top to a larger value */
+    transform: translate(-50%, -50%); /* Keep this for centering relative to new top */
     font-size: inherit;
     color: #FFFFFF;
     line-height: 0;
