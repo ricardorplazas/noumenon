@@ -1,7 +1,7 @@
 body {
     background-color: #055746;
-    color: #FFFFFF; /* Changed text color to white */
-    font-family: 'Newsreader', serif;
+    color: #FFFFFF;
+    font-family: 'Noto Serif', serif; /* Changed font family */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -21,9 +21,9 @@ body {
 }
 
 h1 {
-    font-weight: 200; /* Changed to ExtraLight */
-    font-size: 6rem;   /* Increased size for "Noumenon Capital" */
-    margin-bottom: 0.4em; /* Adjusted spacing slightly */
+    font-weight: 200; /* Keeping ExtraLight */
+    font-size: 4rem;
+    margin-bottom: 0.4em;
     line-height: 1.2;
 }
 
@@ -36,17 +36,16 @@ h1 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* This might need adjustment for Noto Serif */
+                                      /* e.g., try -52% or -55% for the second value */
     font-size: inherit;
-    color: #FFFFFF; /* Changed dot color to white */
-    /* You might still need to fine-tune the transform for perfect centering with weight 200 */
-    /* e.g., transform: translate(-50%, -53%); for ExtraLight */
+    color: #FFFFFF;
     line-height: 0;
 }
 
 p {
-    font-weight: 200; /* Changed to ExtraLight */
-    font-size: 1.5rem; /* Kept original size, h1 is now relatively larger */
+    font-weight: 200; /* Keeping ExtraLight */
+    font-size: 1.5rem;
     margin-top: 0;
 }
 
@@ -55,7 +54,7 @@ p {
 /* For tablets and smaller desktops */
 @media (max-width: 768px) {
     h1 {
-        font-size: 3.2rem; /* Adjusted responsive size */
+        font-size: 3.2rem;
     }
     p {
         font-size: 1.25rem;
@@ -65,10 +64,10 @@ p {
 /* For mobile phones */
 @media (max-width: 480px) {
     h1 {
-        font-size: 2.5rem; /* Adjusted responsive size */
+        font-size: 2.5rem;
     }
     p {
-        font-size: 1.1rem; /* Slightly adjusted for better balance with new h1 size */
+        font-size: 1.1rem;
     }
     .container {
         padding: 0 10px;
